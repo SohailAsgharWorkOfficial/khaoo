@@ -25,6 +25,7 @@ function Cart({cart}) {
             {
                 GlobalApi.DeleteItemFromCart(id).then(resp=>{
                     console.log(resp);
+                    setUpdateCart(!updateCart);
                     toast('Item Removed from Cart!');
                      
             })
